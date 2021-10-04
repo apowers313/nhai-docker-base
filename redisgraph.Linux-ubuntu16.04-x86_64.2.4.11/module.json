@@ -1,0 +1,136 @@
+{
+    "add_command": [],
+    "architecture": "x86_64",
+    "author": "RedisLabs",
+    "capabilities": [
+        "types",
+        "failover_migrate",
+        "persistence_rdb",
+        "persistence_aof",
+        "clustering",
+        "replica_of",
+        "backup_restore",
+        "no_multi_key",
+        "intershard_tls"
+    ],
+    "command_line_args": "",
+    "commands": [
+        {
+            "command_arity": -1,
+            "command_name": "graph.DELETE",
+            "first_key": 1,
+            "flags": [
+                "write"
+            ],
+            "last_key": 1,
+            "step": 1
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.LIST",
+            "first_key": 0,
+            "flags": [
+                "readonly"
+            ],
+            "last_key": 0,
+            "step": 0
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.CONFIG",
+            "first_key": 0,
+            "flags": [
+                "readonly"
+            ],
+            "last_key": 0,
+            "step": 0
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.QUERY",
+            "first_key": 1,
+            "flags": [
+                "write",
+                "denyoom"
+            ],
+            "last_key": 1,
+            "step": 1
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.EXPLAIN",
+            "first_key": 1,
+            "flags": [
+                "write",
+                "denyoom"
+            ],
+            "last_key": 1,
+            "step": 1
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.PROFILE",
+            "first_key": 1,
+            "flags": [
+                "write",
+                "denyoom"
+            ],
+            "last_key": 1,
+            "step": 1
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.BULK",
+            "first_key": 1,
+            "flags": [
+                "write",
+                "denyoom"
+            ],
+            "last_key": 1,
+            "step": 1
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.RO_QUERY",
+            "first_key": 1,
+            "flags": [
+                "readonly"
+            ],
+            "last_key": 1,
+            "step": 1
+        },
+        {
+            "command_arity": -1,
+            "command_name": "graph.SLOWLOG",
+            "first_key": 1,
+            "flags": [
+                "readonly"
+            ],
+            "last_key": 1,
+            "step": 1
+        }
+    ],
+    "config_command": "GRAPH.CONFIG SET",
+    "crdb": {},
+    "dependencies": {},
+    "description": "A graph database on top of Redis which supports Open-Cypher query language.",
+    "display_name": "RedisGraph",
+    "email": "roi@redislabs.com",
+    "exclude_commands": [
+        "GRAPH.CONFIG"
+    ],
+    "git_sha": "b'c070ac43ed3b0ab77cbaf48c780ad8a671b07cda'",
+    "homepage": "http://redisgraph.io",
+    "license": "Redis Source Available License Agreement",
+    "min_redis_pack_version": "6.0.8",
+    "min_redis_version": "6.0",
+    "module_file": "redisgraph.so",
+    "module_name": "graph",
+    "optional-dependencies": {},
+    "os": "Linux",
+    "overide_command": [],
+    "ramp_format_version": 1,
+    "semantic_version": "2.4.11",
+    "sha256": "93dafa422ef3d379dd8d5a7e3d03f368b456da5de215b804334d1b6bc29e77de",
+    "version": 20411.0
+}
