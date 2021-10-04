@@ -3,7 +3,7 @@ ARG OS_VER=bionic
 FROM ubuntu:${OS_VER}
 
 # setup environment
-RUN mkdir -p /home/apowers/log
+RUN mkdir -p /home/apowers
 WORKDIR /home/apowers
 RUN apt update -y
 
@@ -49,4 +49,4 @@ COPY ./supervisord.base.conf /usr/local/etc/supervisord.base.conf
 EXPOSE 8080
 
 # run server
-CMD ["supervisord", "-c", "/usr/local/etc/supervisord.base.conf"]
+#CMD ["supervisord", "-c", "/usr/local/etc/supervisord.base.conf"]
