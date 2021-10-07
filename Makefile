@@ -22,4 +22,4 @@ publish:
 	docker tag $(IMGNAME):latest $(GITPKG):latest
 	docker tag $(IMGNAME):latest $(GITPKG):$(VERSION)
 	docker push $(GITPKG):latest
-	docker $(GITPKG):$(VERSION)
+	docker push $(GITPKG):$(VERSION)
