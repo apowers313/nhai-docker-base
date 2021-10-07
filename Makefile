@@ -1,6 +1,6 @@
 .PHONY: build run shell login publish
 IMGNAME=apowers313/nhai-base
-VERSION=0.3.0
+VERSION=0.9.0
 GITPKG=ghcr.io/$(IMGNAME)
 # RUNCMD=run -p 6379:6379 -it --privileged $(IMGNAME):latest
 RUNCMD=run -p 6379:6379 -p 8080:8080 -p 8888:8888 -it $(IMGNAME):latest
