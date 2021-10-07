@@ -49,4 +49,4 @@ COPY ./supervisord.base.conf /usr/local/etc/supervisord.base.conf
 EXPOSE 8080
 
 # run server
-#CMD ["supervisord", "-c", "/usr/local/etc/supervisord.base.conf"]
+CMD ["supervisord", "-c", "/usr/local/etc/supervisord.base.conf"]
