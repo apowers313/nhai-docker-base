@@ -5,4 +5,5 @@ Base Docker image for NHAI. Includes:
 * NodeJS 16.x
 * Redis 6.x / RedisGraph
 * Jupyter / IJavascript / Magicpatch
+* Papermill for automatically running notebooks
 * Supervisord: starts redis & Jupyter notebook

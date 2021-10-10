@@ -43,6 +43,9 @@ RUN ijsinstall
 RUN npm install -g magicpatch
 RUN magicpatch-install
 
+# papermill
+RUN pip3 install papermill
+
 # supervisor
 RUN pip3 install supervisor
 COPY ./supervisord.base.conf /usr/local/etc/supervisord.base.conf
