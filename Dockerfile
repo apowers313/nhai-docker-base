@@ -45,6 +45,8 @@ RUN magicpatch-install
 
 # papermill
 RUN pip3 install papermill
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 
 # supervisor
 RUN pip3 install supervisor
