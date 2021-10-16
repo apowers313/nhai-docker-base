@@ -4,6 +4,7 @@ FROM ubuntu:${OS_VER}
 
 # setup environment
 RUN mkdir -p /home/apowers
+RUN mkdir -p /var/log/supervisord
 WORKDIR /home/apowers
 RUN apt update -y
 
@@ -34,6 +35,14 @@ RUN apt install -y libgomp1
 RUN pip3 install jupyter
 COPY ./jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 EXPOSE 8888
+
+# jupyter extensions
+RUN pip3 install jupyter_contrib_nbextensions
+RUN pip3 install jupyter_nbextensions_configurator
+RUN jupyter contrib nbextension install --user
+RUN jupyter nbextensions_configurator enable --user
+RUN jupyter nbextension enable toc2/main
+RUN jupyter nbextension enable collapsible_headings/main
 
 # ijavascript
 RUN npm install -g ijavascript
