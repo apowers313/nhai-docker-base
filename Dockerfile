@@ -67,6 +67,10 @@ RUN pip3 install papermill
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
+# http index
+COPY index.html /var/run/indexserver/index.html
+EXPOSE 8088
+
 # supervisor
 RUN pip3 install supervisor
 COPY ./supervisord.base.conf /usr/local/etc/supervisord.base.conf
