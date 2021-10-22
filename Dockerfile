@@ -21,7 +21,6 @@ RUN apt install -y software-properties-common
 RUN add-apt-repository ppa:redislabs/redis
 RUN apt update -y
 RUN apt install -y systemd redis
-#apt install -y systemd
 COPY ./rc.local /etc/rc.local
 COPY ./redis.conf /etc/redis.conf
 EXPOSE 6379
@@ -30,6 +29,17 @@ EXPOSE 6379
 RUN mkdir -p /usr/lib/redis/modules
 COPY ./redisgraph.Linux-ubuntu16.04-x86_64.2.4.11/redisgraph.so /usr/lib/redis/modules/redisgraph.so
 RUN apt install -y libgomp1
+
+# redisinsight
+COPY ./redisinsight-linux64-1.10.1 /usr/bin/redisinsight
+ENV RIPORT=8000
+ENV RIHOST=0.0.0.0
+ENV RIHOMEDIR=/var/run/redisinsight
+ENV RILOGDIR=/var/log/redis
+ENV RILOGLEVEL=INFO
+#ADD ./redisinsight-app-dir.tgz /var/run/redisinsight
+COPY ./redisinsight-app-dir /var/run/redisinsight
+EXPOSE 8000
 
 # jupyter
 RUN pip3 install jupyter
